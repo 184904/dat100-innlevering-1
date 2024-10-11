@@ -19,11 +19,14 @@ public class O2 {
                 } else if (poengSum >= 40) {
                     System.out.println("Karakter E");
                 } else if (poengSum >= 0) {
-                    System.out.println("Karakter F :(");
+                    System.out.println("Karakter F");
                 }
             } else {
-                System.out.println("Skriv inn et poengsum mellom 0-100");
+            	while (poengSum < 0 || poengSum > 100) {
+            		System.out.println("Ugyldig poengsum. Skriv inn en gyldig verdi");
+            		poengSum = scanner.nextInt();
+            	}                
             }
-        }
+        }		scanner.close();
     }
 }
